@@ -1,29 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:pokegex/pages/login.dart';
-import 'package:pokegex/routes.dart';
+import 'package:flutter/services.dart';
+import 'package:pokegex/app.dart';
 import 'package:pokegex/theme.dart';
 
-void main() => runApp(AppMain());
 
-class AppMain extends StatefulWidget{
-  @override
-  State<StatefulWidget> createState() => _AppMainState();
+import 'package:pokegex/state_widget.dart';
 
-}
-
-class _AppMainState extends State<AppMain>{
-  Widget rootPage = LoginPage();
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Poke Gex App',
-      home: rootPage,
-      routes: buildAppRoutes(),
-      theme: buildAppTheme(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-
-
+void main(){
+  StateWidget stateWidget = new StateWidget(child:new PokeApp());
+  runApp(stateWidget);
 }
