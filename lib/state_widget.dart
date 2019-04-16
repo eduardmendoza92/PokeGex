@@ -60,6 +60,7 @@ class _StateWidgetState extends State<StateWidget> {
       // Start the sign-in process:
       googleAccount = await googleSignIn.signIn();
     }
+    
     FirebaseUser firebaseUser = await signIntoFirebase(googleAccount);
     state.user = firebaseUser; // new
     

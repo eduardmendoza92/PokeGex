@@ -25,8 +25,8 @@ class _LoginPageState extends State<LoginPage> {
 
     Text _buildText() {
       return Text(
-        'Recipes',
-        style: Theme.of(context).textTheme.headline,
+        'Poke Gex',
+        style: Theme.of(context).accentTextTheme.headline,
         textAlign: TextAlign.center,
       );
     }
